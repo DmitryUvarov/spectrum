@@ -81,6 +81,7 @@
     @media (any-hover: hover) {
       &:hover {
         .menu__spoller-body {
+          min-width: rem(300);
           opacity: 1;
           visibility: visible;
         }
@@ -157,6 +158,9 @@
         min-width: rem(300);
         visibility: visible;
       }
+    }
+    @media (min-width: $pc) {
+      min-width: rem(300);
     }
 
     @media (max-width: $mobile) {

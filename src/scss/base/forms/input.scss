@@ -4,31 +4,67 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
+//========================================================================================================================================================
+
 .input {
-	border-radius: 0 !important;
-	width: 100%;
-	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._form-focus {
-	}
-	&._form-error {
-	}
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  height: rem(62);
+
+  color: #fffcf4;
+  font-family: Nunito Sans;
+  @include adaptiveValue("font-size", 18, 16);
+  font-weight: 600;
+  line-height: 130%; /* 23.4px */
+
+  &._form-focus {
+  }
+  &._form-error {
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    opacity: 0.6;
+    color: #fffcf4;
+  }
 }
+
+.label {
+  display: flex;
+  align-items: center;
+  column-gap: rem(9);
+  border-radius: 11px;
+  border: 1px solid #fffcf4;
+  padding: 0 rem(20);
+
+  &::before {
+    @include adaptiveValue("font-size", 24, 20);
+    color: #fffcf4;
+  }
+}
+
+//========================================================================================================================================================
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
-	}
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+  resize: none;
+  padding: 0px 0px;
 }
