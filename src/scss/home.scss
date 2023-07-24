@@ -168,3 +168,47 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.partners {
+  @include adaptiveValue("padding-top", 75, 40);
+  @include adaptiveValue("padding-bottom", 75, 40);
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 35);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(255), 1fr));
+    column-gap: rem(60);
+    @include adaptiveValue("column-gap", 60, 20, 0, 1230, 767);
+    row-gap: rem(20);
+
+    @media (max-width: em(660)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    border-radius: rem(10);
+    border: 1px solid #313131;
+    position: relative;
+    padding-bottom: calc(100% - rem(2));
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include adaptiveValue("max-width", 160, 100);
+    }
+  }
+}
