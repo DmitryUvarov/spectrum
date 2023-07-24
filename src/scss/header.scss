@@ -4,15 +4,24 @@
   position: absolute;
   width: 100%;
   z-index: 3;
+
+  @media (min-width: $mobile) {
+    border-bottom: rem(1) solid #fffcf4;
+  }
   &__container {
   }
 
   &__body {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     column-gap: rem(20);
     @include adaptiveValue("padding-top", 25, 15);
-    @include adaptiveValue("padding-bottom", 25, 15);
+
+    @media (max-width: $mobile) {
+      align-items: center;
+      @include adaptiveValue("padding-bottom", 25, 15);
+    }
   }
 
   &__logo {
@@ -31,6 +40,7 @@
 .menu {
   display: flex;
   align-items: center;
+  height: fit-content;
   &__icon {
   }
 
@@ -178,12 +188,14 @@
 
       border-radius: 0px 0px 10px 10px;
       opacity: 0.8;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.26);
       box-shadow:
         -18.56px 18.56px 18.56px 0px rgba(255, 255, 255, 0.06) inset,
         18.56px -18.56px 18.56px 0px rgba(15, 15, 15, 0.06) inset;
-      backdrop-filter: blur(6.126999855041504px);
+      backdrop-filter: blur(6.13px);
       z-index: -1;
+
+      transition: all 0.3s ease 0s;
 
       @media (max-width: $mobile) {
         display: none;
