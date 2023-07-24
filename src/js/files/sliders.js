@@ -114,6 +114,7 @@ function initSliders() {
 			spaceBetween: 0,
 			// autoHeight: true,
 			speed: 800,
+			allowTouchMove: false,
 
 			effect: 'fade',
 			autoplay: {

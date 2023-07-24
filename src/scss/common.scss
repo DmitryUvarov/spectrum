@@ -10,4 +10,19 @@
 }
 
 .pagination {
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    height: rem(15);
+    width: rem(15);
+    display: block;
+    border-radius: rem(15);
+    background-color: #131313;
+    transition: all 0.3s ease 0s;
+  }
+  .swiper-pagination-bullet-active {
+    width: rem(50);
+  }
 }
