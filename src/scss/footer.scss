@@ -1,3 +1,87 @@
 //====================================================================================================
+.footer {
+  padding-bottom: rem(25);
+  &__wrapper {
+    border-top: rem(1) solid #f1db59;
+    border-bottom: rem(1) solid #f1db59;
+
+    padding-top: rem(30);
+    padding-bottom: rem(15);
+  }
+
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: rem(30);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @include adaptiveValue("column-gap", 130, 35, 1, 1230, 991);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(25);
+      column-gap: rem(30);
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 145%; /* 20.3px */
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      background-color: #131313;
+      position: absolute;
+      width: 100%;
+      height: rem(1);
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__logo {
+    @media (min-width: $tablet) {
+      margin-left: auto;
+    }
+    @include adaptiveValue("max-width", 252, 160, 1, 767, 375);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
 
 //====================================================================================================
