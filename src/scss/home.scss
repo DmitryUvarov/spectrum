@@ -125,3 +125,46 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.numbers {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 75, 40);
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include adaptiveValue("gap", 100, 30, 0, 1230, 767);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__item-title {
+    font-family: Play;
+    @include adaptiveValue("font-size", 122, 45);
+    font-weight: 400;
+    line-height: 110%; /* 134.2px */
+    margin-bottom: rem(2);
+  }
+
+  &__item-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+
+    @media (min-width: $mobile) {
+      max-width: rem(120);
+    }
+  }
+}
