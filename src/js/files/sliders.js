@@ -1,5 +1,5 @@
 /*
-Документація по роботі у шаблоні: 
+Документація по роботі у шаблоні:
 Документація слайдера: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
@@ -7,10 +7,10 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Pagination, EffectFade, Autoplay } from 'swiper';
 /*
 Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Детальніше дивись https://swiperjs.com/
 */
@@ -27,9 +27,9 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.swiper123')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.swiper123', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation],
@@ -102,6 +102,34 @@ function initSliders() {
 			on: {
 
 			}
+		});
+	}
+
+	if (document.querySelector('.hero__slider')) {
+		new Swiper('.hero__slider', {
+			modules: [Pagination, EffectFade, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 800,
+
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+
+			pagination: {
+				el: '.hero__pagination',
+				clickable: true,
+			},
+
+
+
+
+
 		});
 	}
 }

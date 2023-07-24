@@ -1,8 +1,11 @@
 //====================================================================================================
-body {
-  background-color: #131313;
-}
+
 .header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
   &__container {
   }
 
@@ -144,9 +147,9 @@ body {
   &__spoller-body {
     @media (min-width: $mobile) {
       position: absolute;
-      min-width: rem(300);
       top: 100%;
       left: rem(-40);
+      right: auto;
       padding: rem(11) rem(40);
       opacity: 0;
       visibility: hidden;
@@ -154,6 +157,7 @@ body {
 
       .open-sublist & {
         opacity: 1;
+        min-width: rem(300);
         visibility: visible;
       }
     }
