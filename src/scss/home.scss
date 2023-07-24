@@ -1,7 +1,7 @@
 //====================================================================================================
 .hero {
   position: relative;
-
+  color: #fffcf4;
   &__container {
   }
 
@@ -24,15 +24,16 @@
   &__title {
     color: #fffcf4;
     flex: 0 0 calc(50% - rem(30));
+    @include adaptiveValue("margin-bottom", 50, 35);
   }
 
   &__content {
     pointer-events: all;
+    flex: 0 0 calc(50% - rem(30));
+    margin-left: auto;
   }
 
   &__text {
-    color: #fffcf4;
-
     @include adaptiveValue("font-size", 18, 16);
     line-height: 130%; /* 23.4px */
 
@@ -71,6 +72,28 @@
     transform: translateX(-50%);
     z-index: 3;
   }
+
+  &__image-ibg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &_dark {
+    @media (min-width: $tablet) {
+      color: #131313;
+
+      .hero__title {
+        color: #131313;
+      }
+    }
+  }
 }
 .slide-hero-ibg {
   width: 100%;
@@ -92,6 +115,8 @@
   &__title {
     color: #f9f9f9;
     margin-bottom: rem(20);
+
+    @include adaptiveValue("margin-bottom", 50, 35);
   }
 
   &__form {

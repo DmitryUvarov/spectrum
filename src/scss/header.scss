@@ -5,9 +5,45 @@
   width: 100%;
   z-index: 3;
 
-  @media (min-width: $mobile) {
-    border-bottom: rem(1) solid #fffcf4;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: rem(1);
+    bottom: 0;
+    left: 0;
+    background-color: #fffcf4;
   }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: rem(1);
+    bottom: 0;
+    right: 0;
+    background-color: #131313;
+    z-index: 1;
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    .menu-open & {
+      display: none;
+    }
+  }
+
+  &_dark {
+    @media (min-width: $tablet) {
+      &::before {
+        display: block;
+      }
+      .menu {
+        color: #131313;
+      }
+    }
+  }
+
   &__container {
   }
 
@@ -38,6 +74,7 @@
   }
 }
 .menu {
+  color: #fffcf4;
   display: flex;
   align-items: center;
   height: fit-content;
@@ -76,7 +113,7 @@
 
   &__item {
     position: relative;
-    color: #fffcf4;
+
     font-size: 18px;
     @include adaptiveValue("font-size", 18, 16, 1, 1200, 767);
     line-height: 145%; /* 26.1px */
@@ -98,12 +135,19 @@
         .menu__spoller-arrow {
           color: rgba(255, 252, 244, 0.8);
 
+          .header_dark & {
+            color: rgba(19, 19, 19, 0.8);
+          }
+
           &::before {
             transform: rotate(180deg);
           }
         }
         .menu__link {
           color: rgba(255, 252, 244, 0.8);
+          .header_dark & {
+            color: rgba(19, 19, 19, 0.8);
+          }
         }
       }
     }
@@ -200,6 +244,13 @@
       @media (max-width: $mobile) {
         display: none;
       }
+
+      .header_dark & {
+        background: rgba(19, 19, 19, 0.16);
+        box-shadow:
+          -18.56px 18.56px 18.56px 0px rgba(19, 19, 19, 0.06) inset,
+          18.56px -18.56px 18.56px 0px rgba(15, 15, 15, 0.06) inset;
+      }
     }
   }
 
@@ -219,6 +270,10 @@
     @media (any-hover: hover) {
       &:hover {
         color: rgba(255, 252, 244, 0.8);
+
+        .header_dark & {
+          color: rgba(19, 19, 19, 0.8);
+        }
       }
     }
   }
@@ -252,6 +307,11 @@
 
       .menu-open & {
         background-color: #131313;
+      }
+      .header_dark & {
+        @media (min-width: $tablet) {
+          background-color: #131313;
+        }
       }
     }
     &::before {
