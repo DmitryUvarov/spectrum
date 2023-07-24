@@ -3,7 +3,7 @@
 .title {
   color: #131313;
   font-family: Play;
-  font-size: 48px;
+  @include adaptiveValue("font-size", 48, 32);
   font-weight: 700;
   line-height: 110%; /* 52.8px */
   text-transform: uppercase;

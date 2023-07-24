@@ -3,8 +3,6 @@
 .header {
   position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
   z-index: 3;
   &__container {
   }
@@ -47,7 +45,6 @@
       background-color: #fff;
 
       padding: rem(80) rem(15) rem(40);
-
       transition: all 0.3s ease 0s;
 
       .menu-open & {
