@@ -77,7 +77,7 @@
 .calculation {
   background: linear-gradient(180deg, #194079 0%, #122d56 100%);
   @include adaptiveValue("padding-top", 20, 40);
-  @include adaptiveValue("padding-bottom", 40, 40);
+  padding-bottom: rem(40);
   &__container {
   }
 
@@ -349,5 +349,87 @@
     font-size: rem(14);
     font-weight: 400;
     line-height: 145%; /* 20.3px */
+  }
+}
+
+//========================================================================================================================================================
+
+.submit {
+  background: linear-gradient(180deg, #184383 0%, #223045 100%);
+  @include adaptiveValue("padding-top", 30, 40);
+  @include adaptiveValue("padding-bottom", 60, 40);
+  &__container {
+  }
+
+  &__title {
+    color: #f9f9f9;
+    @include adaptiveValue("font-size", 69, 32);
+    @include adaptiveValue("margin-bottom", 50, 15);
+  }
+
+  &__body {
+    display: flex;
+    column-gap: rem(60);
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      row-gap: rem(30);
+    }
+  }
+
+  &__form {
+    flex: 0 0 calc(50% - rem(30));
+  }
+
+  &__content {
+  }
+
+  &__text {
+    color: #fffcf4;
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 500;
+    line-height: 130%; /* 39px */
+  }
+
+  &__image {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: column;
+
+  &__inputs {
+    display: grid;
+    gap: rem(20);
+    margin-bottom: auto;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__input {
+    height: rem(64);
+    border-radius: rem(11);
+    border: 1px solid #fffcf4;
+    padding: 0 rem(20);
+
+    @media (max-width: $mobile) {
+      height: rem(60);
+    }
+  }
+
+  &__button {
+    height: rem(60);
+    width: 100%;
+    @include adaptiveValue("margin-top", 50, 20, 0, 991, 767);
   }
 }
