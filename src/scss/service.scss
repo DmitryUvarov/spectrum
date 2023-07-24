@@ -1,0 +1,175 @@
+//========================================================================================================================================================
+
+.garant {
+  @include adaptiveValue("padding-top", 50, 40);
+  @include adaptiveValue("padding-bottom", 75, 40);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    gap: rem(20);
+    column-gap: rem(60);
+    @include adaptiveValue("gap", 60, 30, 0, 991, 767);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    flex: 0 0 calc(50% - rem(30));
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 29, 20);
+    font-weight: 500;
+    line-height: 130%; /* 39px */
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+
+  &__image-ibg {
+    width: 100%;
+    overflow: hidden;
+    border-radius: rem(15);
+    padding-bottom: percent(400, 1200);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(240, 345);
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.sec {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(50% + rem(30));
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: rem(10);
+    background: #2a2a2a;
+    z-index: 1;
+
+    @media (max-width: $tablet) {
+      background-color: #000;
+      opacity: 0.2;
+      width: 100%;
+    }
+  }
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+
+    @media (min-width: $tablet) {
+      min-height: rem(600);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+
+    color: #fffcf4;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 130%; /* 23.4px */
+
+    @include adaptiveValue("padding-top", 80, 40, 1, 991, 375);
+    @include adaptiveValue("padding-bottom", 80, 40, 1, 991, 375);
+
+    @media (min-width: $tablet) {
+      flex: 0 0 calc(50% - rem(30));
+      padding: rem(45) 0;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+
+  &__image-ibg {
+    position: absolute;
+    width: calc(50% - rem(30));
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: rem(10);
+    overflow: hidden;
+    z-index: -1;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      border-radius: rem(0);
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.about {
+  @include adaptiveValue("padding-top", 150, 40);
+  @include adaptiveValue("padding-bottom", 75, 40);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    margin-bottom: rem(20);
+    row-gap: rem(20);
+    @include adaptiveValue("column-gap", 60, 30, 0, 1230, 767);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    flex: 0 0 calc(50% - rem(30));
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 130%; /* 23.4px */
+  }
+
+  &__image-ibg {
+    overflow: hidden;
+    border-radius: rem(10);
+    padding-bottom: percent(600, 1200);
+
+    @media (max-width: $mobile) {
+      border-radius: 0;
+      margin: 0 rem(-15);
+      padding-bottom: percent(240, 345);
+    }
+  }
+}
+.title {
+}
+
+//========================================================================================================================================================
