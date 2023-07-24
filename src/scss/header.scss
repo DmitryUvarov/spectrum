@@ -68,7 +68,7 @@ body {
     position: relative;
     color: #fffcf4;
     font-size: 18px;
-    @include adaptiveValue("font-size", 18, 16, 0, 1200, 767);
+    @include adaptiveValue("font-size", 18, 16, 1, 1200, 767);
     line-height: 145%; /* 26.1px */
 
     @media (max-width: $mobile) {
