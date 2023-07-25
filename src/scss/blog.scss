@@ -1,0 +1,46 @@
+.blog {
+  @include adaptiveValue("padding-top", 50, 40);
+  @include adaptiveValue("padding-bottom", 75, 40);
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__top {
+    position: relative;
+  }
+
+  &__date {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 55, 35);
+
+    @media (min-width: $tablet) {
+      padding: 0 rem(95);
+      text-align: center;
+    }
+  }
+
+  &__text {
+    max-width: rem(900);
+    margin: 0 auto;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 130%; /* 23.4px */
+
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 25, 15);
+      }
+    }
+  }
+}

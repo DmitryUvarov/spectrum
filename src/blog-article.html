@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Блог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title title">БЛОГ, СТАТЬИ И НОВОСТИ</h1>
+                    </div>
+
+                    <div class="hero__back-ibg"><img src="@img/hero/04.jpg" alt=""></div>
+
+                </div>
+            </section>
+
+            <section class="calculation">
+                <div class="calculation__container">
+                    <div class="calculation__body">
+                        <h2 class="calculation__title title">РАССЧЕТ ВАШЕГО ГРУЗА</h2>
+
+                        <form action="#" class="calculation__form form-calculation">
+                            <div class="form-calculation__line">
+                                <label for="inp1" class="form-calculation__label label _icon-location">
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Откуда" class="form-calculation__input input">
+                                </label>
+                                <label for="inp2" class="form-calculation__label label _icon-location">
+                                    <input id="inp2" autocomplete="off" type="text" name="form[]" placeholder="Куда" class="form-calculation__input input">
+                                </label>
+                            </div>
+                            <div class="form-calculation__line">
+                                <label for="inp3" class="form-calculation__label label _icon-truck">
+                                    <input id="inp3" autocomplete="off" type="text" name="form[]" placeholder="Номер груза" class="form-calculation__input input">
+                                </label>
+                                <label for="inp4" class="form-calculation__label label _icon-phone">
+                                    <input id="inp4" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона" class="form-calculation__input input">
+                                </label>
+                            </div>
+                            <button class="form-calculation__button button">РАССЧИТАТЬ</button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="blog">
+                <div class="blog__container">
+                    <div class="blog__body">
+                        <div class="blog__top">
+                            <div class="blog__date date">11.07.2023</div>
+                            <h2 class="blog__title title">Типы контейнеров</h2>
+                        </div>
+                        <div class="blog__text">
+                            <p>Что мы знаем о контейнерах? Многие из нас видели морские грузовые контейнеры только в фильмах. Замечали, что они различных цветов. Но контейнеры различаются ещё по объему, весу и виду перевозимых товаров. Каждый этап работы с опасными веществами очень важен. Но особенно критично квалифицированно и ответственно подойти к классификации и упаковке подобного вида грузов. </p>
+                            <p>Упаковка должна быть подобрана индивидуально для каждого класса опасного груза, а также испытана в соответствие с требованиями ООН. Также стоить учитывать то, что некоторые классы опасных грузов перевозить в одном помещении одновременно строго запрещено.
+                            </p>
+                            <p>Код владельца (owner code) состоит из трех прописных букв латинского алфавита. Он является уникальным и регистрируется в Международном бюро по контейнерам (Bureau International des Conteneurs, BIC). Регистрация проводится непосредственно в Международном бюро по контейнерам, либо национальными регистрационными организациями – филиалами Международного бюро по контейнерам, либо в России – Российским морским регистром судоходства (BIC NRO).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="posts">
+                <div class="posts__container">
+                    <div class="posts__top posts__top_text">
+                        <h2 class="posts__title title">ДРУГИЕ СТАТЬИ</h2>
+                        <a href="#" class="posts__link">ПЕРЕЙТИ В БЛОГ</a>
+                    </div>
+                    <div class="posts__items">
+                        <article class="posts__item item-post">
+                            <a href="#" class="item-post__image-ibg"><img src="@img/post/03.jpg" alt=""></a>
+                            <h3 class="item-post__title"><a href="#">ЧТО НЕЛЬЗЯ ПЕРЕВОЗИТЬ АВТОТРАНТСПОРТОМ?</a></h3>
+                            <div class="item-post__text">
+                                <p>В этой статье исследуются ограничения автомобильного транспорта, обсуждаются различные товары и вещества, которые нельзя безопасно или законно перевозить по дороге.</p>
+                            </div>
+                            <div class="item-post__bottom">
+                                <div class="item-post__date date">11.07.2023</div>
+                                <a href="#" class="item-post__link">ЧИТАТЬ ДАЛЬШЕ</a>
+                            </div>
+                        </article>
+                        <article class="posts__item item-post">
+                            <a href="#" class="item-post__image-ibg"><img src="@img/post/04.jpg" alt=""></a>
+                            <h3 class="item-post__title"><a href="#">ТИПЫ КОНТЕЙНЕРОВ</a></h3>
+                            <div class="item-post__text">
+                                <p>В этой статье исследуются ограничения автомобильного транспорта, обсуждаются различные товары и вещества, которые нельзя безопасно или законно перевозить по дороге.</p>
+                            </div>
+                            <div class="item-post__bottom">
+                                <div class="item-post__date date">11.07.2023</div>
+                                <a href="#" class="item-post__link">ЧИТАТЬ ДАЛЬШЕ</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="submit">
+                <div class="submit__container">
+                    <h2 class="submit__title title">ОСТАВЬТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС! </h2>
+                    <div class="submit__body">
+                        <form action="#" class="submit__form form-submit">
+                            <div class="form-submit__inputs">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Наименование груза *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Вес груза*" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Где забрать груз? *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Куда доставить? *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона *" class="form-submit__input input">
+                            </div>
+                            <button class="form-submit__button button">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                        <div class="submit__content">
+                            <div class="submit__text">Свяжитесь с нами, чтобы оформить ваш заказ и получить надежную и профессиональную перевозку для вашего груза!</div>
+                            <div class="submit__image"><img src="@img/submit/01.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- <section class="class">
+				<div class="class__container">
+					<div class="class__body">
+
+					</div>
+				</div>
+			</section> -->
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
