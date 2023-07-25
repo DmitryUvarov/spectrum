@@ -28,6 +28,19 @@
     color: #fffcf4;
     flex: 1 0 calc(50% - rem(30));
     @include adaptiveValue("margin-bottom", 50, 35, 1, 1230, 991);
+
+    .title {
+      color: #fffcf4;
+    }
+  }
+
+  &__subtitle {
+    color: #fffcf4;
+    font-family: Nunito Sans;
+    @include adaptiveValue("font-size", 28, 22);
+    font-weight: 700;
+    line-height: 110%; /* 30.8px */
+    margin-top: em(12, 28);
   }
 
   &__content {
