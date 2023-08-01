@@ -5,27 +5,6 @@
   width: 100%;
   z-index: 3;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: rem(1);
-    bottom: 0;
-    left: 0;
-    background-color: #fffcf4;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: rem(1);
-    bottom: 0;
-    right: 0;
-    background-color: #131313;
-    z-index: 1;
-    display: none;
-  }
-
   &::before,
   &::after {
     .menu-open & {
@@ -61,6 +40,7 @@
   }
 
   &__logo {
+    max-width: rem(128);
     @media (max-width: $mobile) {
       max-width: rem(115);
     }

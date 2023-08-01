@@ -73,6 +73,7 @@
   }
 
   &__logo {
+    max-width: rem(252);
     @media (min-width: $tablet) {
       margin-left: auto;
     }
