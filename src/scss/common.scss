@@ -37,3 +37,98 @@
   padding: rem(3) rem(5) rem(3) rem(5);
   width: max-content;
 }
+
+//========================================================================================================================================================
+
+.social {
+  position: fixed;
+  bottom: rem(30);
+  right: rem(30);
+  @include adaptiveValue("bottom", 30, 15);
+  @include adaptiveValue("right", 30, 15);
+  z-index: 2;
+
+  &:not(.open-social) {
+    .social__button::after {
+      animation: pulse 2.5s linear infinite;
+    }
+  }
+  &__body {
+    position: relative;
+    @include adaptiveValue("font-size", 25, 20);
+    color: #fff;
+  }
+
+  &__button {
+    background-color: #a985cd;
+    width: rem(50);
+    height: rem(50);
+    border-radius: 50%;
+
+    .open-social & {
+      &::before {
+        content: "\e906";
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #a985cd;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    bottom: calc(100% + rem(30));
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+
+    .open-social & {
+      opacity: 1;
+      visibility: visible;
+      bottom: calc(100% + rem(10));
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(50);
+    height: rem(50);
+    border-radius: 50%;
+    background-color: #0be78b;
+    &_telegram {
+      background-color: #3c99d8;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}

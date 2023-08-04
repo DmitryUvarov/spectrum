@@ -46,6 +46,15 @@ function pageLoad() {
         } else if (!targetElement.closest('.menu__item') && document.querySelector('.menu__item.open-sublist')) {
             document.querySelector('.menu__item.open-sublist').classList.remove('open-sublist')
         }
+
+
+        ///////////
+
+        if (targetElement.closest('[data-social-btn]')) {
+            targetElement.closest('[data-social]').classList.toggle('open-social')
+        } else if (!targetElement.closest('[data-social]') && document.querySelector('[data-social].open-social')) {
+            document.querySelector('[data-social].open-social').classList.remove('open-social')
+        }
     })
 
 }

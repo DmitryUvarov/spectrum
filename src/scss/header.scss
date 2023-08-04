@@ -70,6 +70,7 @@
       left: -100%;
       overflow: auto;
       background-color: #fff;
+      z-index: 6;
 
       padding: rem(80) rem(15) rem(40);
       transition: all 0.3s ease 0s;
@@ -291,7 +292,7 @@
     position: relative;
     width: rem(30);
     height: rem(18);
-    z-index: 5;
+    z-index: 7;
     @media (any-hover: none) {
       cursor: default;
     }
