@@ -102,11 +102,24 @@
             <section class="submit">
                 <div class="submit__container">
                     <h2 class="submit__title title">ОСТАВЬТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС! </h2>
+                    <div class="submit__mark submit__mark_orange">Эксперт перезвонит вам и ответит на ваши вопросы. </div>
+                    <div class="submit__mark">Принимаем заказы на грузы весом от 100 кг и выше. </div>
                     <div class="submit__body">
                         <form action="#" class="submit__form form-submit">
                             <div class="form-submit__inputs">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Наименование груза *" class="form-submit__input input">
-                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Вес груза*" class="form-submit__input input">
+
+                                <select name="form[]" class="form" data-show-selected>
+                                    <option value="" selected>Тип груза*</option>
+                                    <option value="1">Контейнер 6 метров ( 20 GP )</option>
+                                    <option value="2">Контейнер 6 метров ( 20 HC )</option>
+                                    <option value="3">Контейнер 12 метров ( 40 GP )</option>
+                                    <option value="4">Контейнер 12 метров ( 40 HC )</option>
+                                    <option value="5">Контейнер 14 метров ( 45 HC )</option>
+                                    <option value="6">Фура 90 м3</option>
+                                    <option value="7">Фура 120 м3</option>
+                                </select>
+
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Адрес погрузки? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Куда доставить? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя *" class="form-submit__input input">
@@ -116,6 +129,7 @@
                         </form>
                         <div class="submit__content">
                             <div class="submit__text">Свяжитесь с нами, чтобы оформить ваш заказ и получить надежную и профессиональную перевозку для вашего груза!</div>
+                            <div class="submit__mark submit__mark_orange">Осуществляем грузоперевозки только из Китая.</div>
                             <div class="submit__image"><img src="@img/submit/01.png" alt=""></div>
                         </div>
                     </div>
