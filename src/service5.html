@@ -11,7 +11,9 @@
             <section class="hero">
                 <div class="hero__container">
                     <div class="hero__body">
-                        <h1 class="hero__title title">РАСТАМОЖКА</h1>
+                        <h1 class="hero__title">
+                            <div class="title">РАСТАМОЖКА</div>
+                        </h1>
                         <div class="hero__content">
                             <div class="hero__text">
                                 <p>Персонал нашей компании с большим опытом работы в сфере таможенного оформления предоставит вам квалифицированную консультацию.</p>
@@ -40,7 +42,16 @@
                             </div>
                             <div class="form-calculation__line">
                                 <label for="inp3" class="form-calculation__label label _icon-truck">
-                                    <input id="inp3" autocomplete="off" type="text" name="form[]" placeholder="Номер груза" class="form-calculation__input input">
+                                    <select id="inp3" name="form[]" data-show-selected data-class-modif="noline">
+                                        <option value="" selected>Тип груза*</option>
+                                        <option value="1">Контейнер 6 метров ( 20 GP )</option>
+                                        <option value="2">Контейнер 6 метров ( 20 HC )</option>
+                                        <option value="3">Контейнер 12 метров ( 40 GP )</option>
+                                        <option value="4">Контейнер 12 метров ( 40 HC )</option>
+                                        <option value="5">Контейнер 14 метров ( 45 HC )</option>
+                                        <option value="6">Фура 90 м3</option>
+                                        <option value="7">Фура 120 м3</option>
+                                    </select>
                                 </label>
                                 <label for="inp4" class="form-calculation__label label _icon-phone">
                                     <input id="inp4" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона" class="form-calculation__input input">
@@ -59,7 +70,7 @@
                         <div class="garant__content">
                             <div class="garant__title">Мы гарантируем полную безопасность и целостность вашего груза.</div>
                             <div class="garant__text">
-                                <p>По железной дороге можно перевезти практически любой тип груза: от сыпучих материалов до продуктов питания. Стоимость железнодорожных перевозок является достаточно небольшой благодаря очень высокой грузоподъемности. </p>
+                                <p>Через оформление таможни должны пройти все товары, которые перемещаются на грузовом или пассажирском транспортном средстве через таможенную либо госграницу. Сюда относятся даже предметы личного пользования, которые физические лица перевозят с собой и должны декларировать согласно законодательству РУЗ . Для товарных единиц и посылок при грузоперевозках перечисленные манипуляции обязательны для абсолютно всех видов грузов. Это и стандартные типы, и опасные, негабаритные и др. Таким образом, растаможить придется не только авто, которое перегоняют через государственную границу, но и все остальные грузы, товары.</p>
                             </div>
                         </div>
                         <div class="garant__image-ibg"><img src="@img/service/11.jpg" alt=""></div>
@@ -71,7 +82,17 @@
                 <div class="sec__container">
                     <div class="sec__body">
                         <div class="sec__text">
-                            <p>Независимость от погодных факторов делает железнодорожные грузоперевозки надежнейшим видом транспортировки, который гарантирует полную сохранность предоставленного груза и исключает задержку доставки. В нашей Компании работают профессионалы и эксперты, чьи знания и многолетний опыт в области логистики позволяют осуществлять железнодорожные грузоперевозки в идеальном соотношении стоимости и качества предоставленных услуг.
+                            <p>Как понять термин «растаможить», что он подразумевает? Процедура включает в себя несколько последовательных этапов:</p>
+                            <p>1. Изготовление и заверение сопроводительных документов на товарные ценности в месте отправления, получение разрешительных бумаг на определенные категории грузов (несущие опасность для людей и экологии, лекарства, наркотические вещества, предназначенные для терапии отдельных заболеваний).</p>
+                            <p>2. Заполнение экспортной декларации.</p>
+                            <p>3. Осуществление налоговых платежей и таможенных сборов.
+                            </p>
+                            <p>4. Оформление получения задекларированного товара на импорт.
+                            </p>
+                            <p>5. Регистрирование новых участников внешнеэкономической деятельности, связанной с экспортом.
+                            </p>
+                            <p>6. Изготовление сертификата ключа проверки электронной подписи, подтверждающего ее принадлежность владельцу;</p>
+                            <p>7. Составление документации на отгрузку от таможенного пункта пропуска в стране доставки до момента попадания к конечному получателю.
                             </p>
                         </div>
                         <div class="sec__image-ibg"><img src="@img/service/12.jpg" alt=""></div>
@@ -110,7 +131,7 @@
                             </div>
                             <div class="advantages__item item-advantages">
                                 <div class="item-advantages__ico"><img src="@img/advantages/04.svg" alt=""></div>
-                                <div class="item-advantages__text">СТРАХОВАНИЕ И ОТВЕТСТВЕННОСТЬ ЗА ГРУЗ</div>
+                                <div class="item-advantages__text">Безопасность и ответственность за груз</div>
                             </div>
                             <div class="advantages__item item-advantages">
                                 <div class="item-advantages__ico"><img src="@img/advantages/05.svg" alt=""></div>
@@ -133,7 +154,7 @@
                             <div class="form-submit__inputs">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Наименование груза *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Вес груза*" class="form-submit__input input">
-                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Где забрать груз? *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Адрес погрузки? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Куда доставить? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона *" class="form-submit__input input">

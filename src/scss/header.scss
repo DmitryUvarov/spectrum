@@ -131,6 +131,27 @@
         }
       }
     }
+
+    &_col {
+      display: flex;
+      flex-direction: column;
+
+      @media (any-hover: hover) {
+        &:hover {
+          .menu__link {
+            color: #fffcf4;
+          }
+        }
+      }
+
+      .menu__link {
+        @media (any-hover: hover) {
+          &:hover {
+            color: rgba(255, 252, 244, 0.8);
+          }
+        }
+      }
+    }
   }
 
   &__link {

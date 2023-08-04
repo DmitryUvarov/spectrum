@@ -25,12 +25,17 @@
   }
 
   &__title {
+    font-weight: 400;
     color: #fffcf4;
     flex: 1 0 calc(50% - rem(30));
     @include adaptiveValue("margin-bottom", 50, 35, 1, 1230, 991);
 
     .title {
       color: #fffcf4;
+    }
+
+    span {
+      font-weight: 700;
     }
   }
 
@@ -165,6 +170,10 @@
 
   &__label {
     width: 100%;
+
+    @media (min-width: $tablet) {
+      max-width: rem(223);
+    }
   }
 
   &__input {
@@ -216,10 +225,6 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 130%; /* 23.4px */
-
-    @media (min-width: $mobile) {
-      max-width: rem(120);
-    }
   }
 }
 
@@ -322,6 +327,7 @@
   }
 
   &__title {
+    text-transform: uppercase;
     @include adaptiveValue("font-size", 28, 22);
     font-weight: 700;
     line-height: 110%; /* 30.8px */
@@ -400,6 +406,7 @@
   }
 
   &__text {
+    text-transform: uppercase;
     font-size: rem(14);
     font-weight: 400;
     line-height: 145%; /* 20.3px */
@@ -429,6 +436,9 @@
       flex-direction: column-reverse;
       row-gap: rem(30);
     }
+    @media (min-width: $tablet) {
+      margin-top: rem(65);
+    }
   }
 
   &__form {
@@ -443,6 +453,8 @@
     @include adaptiveValue("font-size", 30, 20);
     font-weight: 500;
     line-height: 130%; /* 39px */
+
+    margin-bottom: rem(23);
   }
 
   &__image {
@@ -452,6 +464,18 @@
 
     img {
       max-width: 100%;
+    }
+  }
+
+  &__mark {
+    color: #fff;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+    text-transform: uppercase;
+    @include adaptiveValue("margin-bottom", 15, 10);
+    &_orange {
+      color: #fbd826;
     }
   }
 }

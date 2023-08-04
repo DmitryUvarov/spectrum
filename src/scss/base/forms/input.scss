@@ -18,7 +18,7 @@ textarea {
   background-color: transparent;
   height: rem(62);
 
-  color: #fffcf4;
+  color: #fff;
   font-family: Nunito Sans;
   @include adaptiveValue("font-size", 18, 16);
   font-weight: 600;
@@ -34,7 +34,7 @@ textarea {
   }
 
   &::placeholder {
-    opacity: 0.6;
+    // opacity: 0.6;
     color: #fffcf4;
   }
 }

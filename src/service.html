@@ -11,7 +11,9 @@
             <section class="hero">
                 <div class="hero__container">
                     <div class="hero__body">
-                        <h1 class="hero__title title">ЖД ПЕРЕВОЗКИ</h1>
+                        <h1 class="hero__title">
+                            <div class="title">ЖД ПЕРЕВОЗКИ из Китая в Узбекистан</div>
+                        </h1>
                         <div class="hero__content">
                             <div class="hero__text">
                                 <p>Причина его востребованности заключается в серьезных преимуществах по сравнению с другими видами транспорта, особенно для крупных партий грузов.⠀</p>
@@ -40,7 +42,16 @@
                             </div>
                             <div class="form-calculation__line">
                                 <label for="inp3" class="form-calculation__label label _icon-truck">
-                                    <input id="inp3" autocomplete="off" type="text" name="form[]" placeholder="Номер груза" class="form-calculation__input input">
+                                    <select id="inp3" name="form[]" data-show-selected data-class-modif="noline">
+                                        <option value="" selected>Тип груза*</option>
+                                        <option value="1">Контейнер 6 метров ( 20 GP )</option>
+                                        <option value="2">Контейнер 6 метров ( 20 HC )</option>
+                                        <option value="3">Контейнер 12 метров ( 40 GP )</option>
+                                        <option value="4">Контейнер 12 метров ( 40 HC )</option>
+                                        <option value="5">Контейнер 14 метров ( 45 HC )</option>
+                                        <option value="6">Фура 90 м3</option>
+                                        <option value="7">Фура 120 м3</option>
+                                    </select>
                                 </label>
                                 <label for="inp4" class="form-calculation__label label _icon-phone">
                                     <input id="inp4" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона" class="form-calculation__input input">
@@ -110,7 +121,7 @@
                             </div>
                             <div class="advantages__item item-advantages">
                                 <div class="item-advantages__ico"><img src="@img/advantages/04.svg" alt=""></div>
-                                <div class="item-advantages__text">СТРАХОВАНИЕ И ОТВЕТСТВЕННОСТЬ ЗА ГРУЗ</div>
+                                <div class="item-advantages__text">Безопасность и ответственность за груз</div>
                             </div>
                             <div class="advantages__item item-advantages">
                                 <div class="item-advantages__ico"><img src="@img/advantages/05.svg" alt=""></div>
@@ -133,7 +144,7 @@
                             <div class="form-submit__inputs">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Наименование груза *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Вес груза*" class="form-submit__input input">
-                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Где забрать груз? *" class="form-submit__input input">
+                                <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Адрес погрузки? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Куда доставить? *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя *" class="form-submit__input input">
                                 <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона *" class="form-submit__input input">

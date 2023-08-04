@@ -11,13 +11,13 @@
 			<section class="hero">
 				<div class="hero__container">
 					<div class="hero__body">
-						<h1 class="hero__title title">SPECTRUM — ЛЕГКАЯ ЛОГИСТИКА ТЯЖЕЛЫХ ГРУЗОВ</h1>
+						<h1 class="hero__title title"><span>SPECTRUM</span> — ЛЕГКАЯ ЛОГИСТИКА ТЯЖЕЛЫХ ГРУЗОВ из Китая в Узбекистан</h1>
 						<div class="hero__content">
 							<div class="hero__text">
 								<p>Перевозка целых контейнеров размеров 40GP, 40HQ и 45HQ, а также возможность погрузки объемом до 120 м³. Независимо от размера вашего груза, мы готовы обеспечить его надежную и быструю доставку.</p>
 								<p>Наши профессиональные грузовые экспедиторы и логистические специалисты гарантируют, что ваш груз будет доставлен в целости и сохранности.</p>
 							</div>
-							<button class="hero__button button">СВЯЗАТЬСЯ С НАМИ</button>
+							<a href="tel:+998981176776" class="hero__button button">СВЯЗАТЬСЯ С НАМИ</a>
 						</div>
 					</div>
 
@@ -50,7 +50,16 @@
 							</div>
 							<div class="form-calculation__line">
 								<label for="inp3" class="form-calculation__label label _icon-truck">
-									<input id="inp3" autocomplete="off" type="text" name="form[]" placeholder="Номер груза" class="form-calculation__input input">
+									<select id="inp3" name="form[]" data-show-selected data-class-modif="noline">
+										<option value="" selected>Тип груза*</option>
+										<option value="1">Контейнер 6 метров ( 20 GP )</option>
+										<option value="2">Контейнер 6 метров ( 20 HC )</option>
+										<option value="3">Контейнер 12 метров ( 40 GP )</option>
+										<option value="4">Контейнер 12 метров ( 40 HC )</option>
+										<option value="5">Контейнер 14 метров ( 45 HC )</option>
+										<option value="6">Фура 90 м3</option>
+										<option value="7">Фура 120 м3</option>
+									</select>
 								</label>
 								<label for="inp4" class="form-calculation__label label _icon-phone">
 									<input id="inp4" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона" class="form-calculation__input input">
@@ -68,19 +77,19 @@
 					<div class="numbers__items" data-watch>
 						<div class="numbers__item">
 							<div data-digits-counter class="numbers__item-title">10</div>
-							<div class="numbers__item-text">лет опыта</div>
+							<div class="numbers__item-text">Лет опыта</div>
 						</div>
 						<div class="numbers__item">
-							<div data-digits-counter class="numbers__item-title">1000</div>
-							<div class="numbers__item-text">выполненных заказов</div>
+							<div class="numbers__item-title">93%+</div>
+							<div class="numbers__item-text">Довольны нашими услугами, рекомендуют нас другим</div>
 						</div>
 						<div class="numbers__item">
 							<div data-digits-counter class="numbers__item-title">25</div>
-							<div class="numbers__item-text">дней жд перевозка</div>
+							<div class="numbers__item-text">Дней жд перевозка</div>
 						</div>
 						<div class="numbers__item">
 							<div data-digits-counter class="numbers__item-title">10</div>
-							<div class="numbers__item-text">дней авиаперевозка</div>
+							<div class="numbers__item-text">Дней авиаперевозка</div>
 						</div>
 					</div>
 				</div>
@@ -127,7 +136,7 @@
 						<div class="services__items">
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">01 / ЖД </h3>
+									<h3 class="item-services__title">ЖД </h3>
 									<div class="item-services__text">
 										<p>Жд-перевозки из Китая в Узбекистан — надежное решение для вашего бизнеса! С нашей помощью вы сможете получить надежную и эффективную перевозку вашего груза по железной дороге.</p>
 									</div>
@@ -136,25 +145,25 @@
 							</div>
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">02 / АВИА </h3>
+									<h3 class="item-services__title">АВТО</h3>
 									<div class="item-services__text">
-										<p>Наша компания осуществляет Авиаперевозки за 15-20 дней. Самый быстрый, надежный способ переместить ваш груз на любое расстояние снова доступен.</p>
+										<p>Мы предлагаем оптимальные маршруты движения и надежные схемы доставки грузов. Организуем автомобильные перевозки товаров любых разновидностей. </p>
 									</div>
 								</div>
 								<div class="item-services__img-ibg"><img src="@img/services/02.jpg" alt=""></div>
 							</div>
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">03 / АВТО</h3>
+									<h3 class="item-services__title">СБОРНЫЕ ГРУЗЫ</h3>
 									<div class="item-services__text">
-										<p>Мы предлагаем оптимальные маршруты движения и надежные схемы доставки грузов. Организуем автомобильные перевозки товаров любых разновидностей. </p>
+										<p>Перевозка сборных грузов – это транспортировка мелкогабаритных заказов от разных клиентов в одном транспортном средстве по одному пути следования.</p>
 									</div>
 								</div>
 								<div class="item-services__img-ibg"><img src="@img/services/03.jpg" alt=""></div>
 							</div>
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">04 / БЕЗОПАСНАЯ ПЕРЕВОЗКА (автомобиль плюс контейнер) </h3>
+									<h3 class="item-services__title">Нестандартные грузы</h3>
 									<div class="item-services__text">
 										<p>Мы предлагаем оптимальные контейнеры и надежные схемы доставки грузов. Организуем безопасные перевозки товаров любых разновидностей. </p>
 									</div>
@@ -163,16 +172,16 @@
 							</div>
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">05 / СБОРНЫЕ ГРУЗЫ</h3>
+									<h3 class="item-services__title">АВИА </h3>
 									<div class="item-services__text">
-										<p>Перевозка сборных грузов – это транспортировка мелкогабаритных заказов от разных клиентов в одном транспортном средстве по одному пути следования.</p>
+										<p>Наша компания осуществляет Авиаперевозки за 15-20 дней. Самый быстрый, надежный способ переместить ваш груз на любое расстояние снова доступен.</p>
 									</div>
 								</div>
 								<div class="item-services__img-ibg"><img src="@img/services/05.jpg" alt=""></div>
 							</div>
 							<div class="services__item item-services">
 								<div class="item-services__body">
-									<h3 class="item-services__title">06 / РАСТАМОЖКА</h3>
+									<h3 class="item-services__title">РАСТАМОЖКА</h3>
 									<div class="item-services__text">
 										<p>Опытные специалисты, компетентные в вопросах логистики и таможенного оформления грузов, учтут все нюансы и разрешат любые ситуации.</p>
 									</div>
@@ -204,7 +213,7 @@
 							</div>
 							<div class="advantages__item item-advantages">
 								<div class="item-advantages__ico"><img src="@img/advantages/04.svg" alt=""></div>
-								<div class="item-advantages__text">СТРАХОВАНИЕ И ОТВЕТСТВЕННОСТЬ ЗА ГРУЗ</div>
+								<div class="item-advantages__text">Безопасность и ответственность за груз</div>
 							</div>
 							<div class="advantages__item item-advantages">
 								<div class="item-advantages__ico"><img src="@img/advantages/05.svg" alt=""></div>
@@ -222,12 +231,25 @@
 			<section class="submit">
 				<div class="submit__container">
 					<h2 class="submit__title title">ОСТАВЬТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС! </h2>
+					<div class="submit__mark submit__mark_orange">Эксперт перезвонит вам и ответит на ваши вопросы. </div>
+					<div class="submit__mark">Принимаем заказы на грузы весом от 100 кг и выше. </div>
 					<div class="submit__body">
 						<form action="#" class="submit__form form-submit">
 							<div class="form-submit__inputs">
 								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Наименование груза *" class="form-submit__input input">
-								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Вес груза*" class="form-submit__input input">
-								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Где забрать груз? *" class="form-submit__input input">
+
+								<select name="form[]" class="form" data-show-selected>
+									<option value="" selected>Тип груза*</option>
+									<option value="1">Контейнер 6 метров ( 20 GP )</option>
+									<option value="2">Контейнер 6 метров ( 20 HC )</option>
+									<option value="3">Контейнер 12 метров ( 40 GP )</option>
+									<option value="4">Контейнер 12 метров ( 40 HC )</option>
+									<option value="5">Контейнер 14 метров ( 45 HC )</option>
+									<option value="6">Фура 90 м3</option>
+									<option value="7">Фура 120 м3</option>
+								</select>
+
+								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Адрес погрузки? *" class="form-submit__input input">
 								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Куда доставить? *" class="form-submit__input input">
 								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя *" class="form-submit__input input">
 								<input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Номер телефона *" class="form-submit__input input">
@@ -236,6 +258,7 @@
 						</form>
 						<div class="submit__content">
 							<div class="submit__text">Свяжитесь с нами, чтобы оформить ваш заказ и получить надежную и профессиональную перевозку для вашего груза!</div>
+							<div class="submit__mark submit__mark_orange">Осуществляем грузоперевозки только из Китая.</div>
 							<div class="submit__image"><img src="@img/submit/01.png" alt=""></div>
 						</div>
 					</div>
