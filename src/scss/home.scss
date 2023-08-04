@@ -318,6 +318,14 @@
     justify-content: flex-start;
   }
 
+  @media (any-hover: hover) {
+    &:hover {
+      .item-services__img-ibg {
+        transform: scale(1.05);
+      }
+    }
+  }
+
   &__body {
     color: #fffcf4;
 
@@ -356,6 +364,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    transition: all 0.3s ease 0s;
   }
 }
 
